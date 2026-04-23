@@ -1,0 +1,43 @@
+---
+/**
+ * Sección de proyectos destacados con tarjetas de imagen
+ * y efecto hover que revela la descripción.
+ */
+---
+
+<section id="proyectos" class="py-24 px-6 md:px-12">
+	<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4 reveal">
+		<h2 class="text-4xl md:text-6xl font-black tracking-tighter">HITOS <br />ARQUITECTÓNICOS.</h2>
+		<p class="text-gray-400 max-w-md">Nuestra trayectoria se mide en los edificios que definen el skyline de Bizkaia.</p>
+	</div>
+
+	<div class="grid md:grid-cols-2 gap-8">
+		<!-- Torres de Isozaki -->
+		<div class="project-card relative overflow-hidden group cursor-pointer reveal h-[600px]">
+			<img
+				src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
+				alt="Torres Isozaki"
+				class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+			/>
+			<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-12 flex flex-col justify-end">
+				<span class="service-badge self-start px-3 py-1 text-xs font-bold mb-4">REHABILITACIÓN</span>
+				<h4 class="text-4xl font-black mb-2 uppercase">Torres de Isozaki</h4>
+				<p class="text-gray-300 opacity-0 group-hover:opacity-100 transition duration-500">Mantenimiento técnico y restauración de la fachada de cristal en Bilbao.</p>
+			</div>
+		</div>
+
+		<!-- San Ignacio 8 -->
+		<div class="project-card relative overflow-hidden group cursor-pointer reveal h-[600px]">
+			<img
+				src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?auto=format&fit=crop&q=80&w=2000"
+				alt="San Ignacio 8"
+				class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+			/>
+			<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-12 flex flex-col justify-end">
+				<span class="service-badge self-start px-3 py-1 text-xs font-bold mb-4">IMPERMEABILIZACIÓN</span>
+				<h4 class="text-4xl font-black mb-2 uppercase">San Ignacio 8</h4>
+				<p class="text-gray-300 opacity-0 group-hover:opacity-100 transition duration-500">Ganador Premio EKI ERAIKIN: Excelencia en eficiencia energética.</p>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,60 @@
+---
+/**
+ * Asistente de presupuesto con wizard de 3 pasos:
+ * 1. Selección de perfil
+ * 2. Tipo de intervención (generado dinámicamente por JS)
+ * 3. Formulario de contacto
+ */
+---
+
+<section id="contacto" class="py-24 px-6 md:px-12">
+	<div class="max-w-4xl mx-auto text-center mb-16">
+		<h2 class="text-4xl md:text-6xl font-black mb-4 tracking-tighter uppercase">Asistente Inteligente</h2>
+		<p class="text-gray-400">Diseñamos una solución técnica adaptada a su perfil. Comience aquí.</p>
+	</div>
+
+	<div id="budget-wizard" class="max-w-3xl mx-auto rounded-2xl p-8 md:p-12">
+		<!-- Paso 1: Selección de perfil -->
+		<div class="wizard-step active" data-step="1">
+			<h4 class="text-2xl font-bold mb-8 text-center uppercase">¿Cuál es su perfil?</h4>
+			<div class="grid sm:grid-cols-3 gap-4">
+				<button class="profile-opt p-8 border border-white/10 hover:border-amber-500 transition text-center flex flex-col items-center gap-4" data-profile="admin">
+					<i class="fas fa-users-gear text-3xl"></i>
+					<span class="font-bold text-xs uppercase tracking-widest">Administrador de Fincas</span>
+				</button>
+				<button class="profile-opt p-8 border border-white/10 hover:border-amber-500 transition text-center flex flex-col items-center gap-4" data-profile="industry">
+					<i class="fas fa-industry text-3xl"></i>
+					<span class="font-bold text-xs uppercase tracking-widest">Sector Industrial</span>
+				</button>
+				<button class="profile-opt p-8 border border-white/10 hover:border-amber-500 transition text-center flex flex-col items-center gap-4" data-profile="private">
+					<i class="fas fa-user text-3xl"></i>
+					<span class="font-bold text-xs uppercase tracking-widest">Particular / VIP</span>
+				</button>
+			</div>
+		</div>
+
+		<!-- Paso 2: Tipo de intervención (dinámico) -->
+		<div class="wizard-step" data-step="2">
+			<button class="prev-step mb-6 text-xs text-gray-500 uppercase hover:text-white">
+				<i class="fas fa-arrow-left mr-2"></i> Volver
+			</button>
+			<h4 id="step-2-title" class="text-2xl font-bold mb-8 text-center uppercase">Tipo de Intervención</h4>
+			<div class="grid sm:grid-cols-2 gap-4" id="service-options">
+				<!-- Opciones generadas dinámicamente por main.js -->
+			</div>
+		</div>
+
+		<!-- Paso 3: Formulario de contacto -->
+		<div class="wizard-step" data-step="3">
+			<h4 class="text-2xl font-bold mb-8 text-center uppercase">Información de Contacto</h4>
+			<form class="space-y-4">
+				<input type="text" placeholder="Nombre completo" class="w-full bg-white/5 border border-white/10 p-4 outline-none focus:border-amber-500 transition" />
+				<input type="email" placeholder="Email corporativo" class="w-full bg-white/5 border border-white/10 p-4 outline-none focus:border-amber-500 transition" />
+				<textarea placeholder="Detalles del proyecto" class="w-full bg-white/5 border border-white/10 p-4 h-32 outline-none focus:border-amber-500 transition"></textarea>
+				<button type="submit" class="w-full bg-amber-500 text-black font-black p-5 uppercase tracking-widest hover:bg-amber-400 transition">
+					Solicitar Diagnóstico Técnico
+				</button>
+			</form>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,38 @@
+---
+interface Props {
+  /** Título de la página */
+  title?: string;
+  /** Descripción para SEO */
+  description?: string;
+}
+
+const {
+  title = 'Sadekosa | Impermeabilización',
+  description = 'Im	permeabilización y rehabilitación técnica de edificios impulsada por Inteligencia Artificial y rigor de ingeniería. 40 años de experiencia en Bizkaia.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- Fuentes y iconos -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<!-- Lógica interactiva cargada como módulo ES -->
+		<script src="../scripts/main.js"></script>
+	</body>
+</html>

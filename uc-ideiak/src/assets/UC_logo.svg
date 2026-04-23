@@ -1,0 +1,11 @@
+<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circuito estilizado para Favicon -->
+  <path d="M8 8H24V24H8V8Z" stroke="#BFF549" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 12H20V20H12V12Z" fill="#BFF549"/>
+  <rect x="4" y="4" width="4" height="4" fill="#BFF549" fill-opacity="0.3"/>
+  <rect x="24" y="24" width="4" height="4" fill="#BFF549" fill-opacity="0.3"/>
+  <path d="M16 4V8" stroke="#BFF549" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16 24V28" stroke="#BFF549" stroke-width="2" stroke-linecap="round"/>
+  <path d="M4 16H8" stroke="#BFF549" stroke-width="2" stroke-linecap="round"/>
+  <path d="M24 16H28" stroke="#BFF549" stroke-width="2" stroke-linecap="round"/>
+</svg>

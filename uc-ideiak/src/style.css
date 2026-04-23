@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  /* Paleta de Colores de Glaido */
+  --color-primary: #BFF549;
+  --color-accent: #BFF549;
+  --color-background: #0D0D0D;
+  --color-text-primary: #0D0D0D; 
+  --color-link: #111;
+
+  /* Tipografías */
+  --font-heading: "Aspekta", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+
+  /* Bordes y Spacing */
+  --radius-brand: 2px;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Aspekta';
+    src: url('https://fonts.cdnfonts.com/s/85496/Aspekta-500.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  body {
+    @apply bg-background text-white font-body antialiased selection:bg-primary selection:text-background relative overflow-x-hidden;
+    background-color: #0D0D0D;
+    background-image: 
+      radial-gradient(at 15% 15%, rgba(191,245,73,0.08) 0px, transparent 40%),
+      radial-gradient(at 85% 85%, rgba(191,245,73,0.08) 0px, transparent 40%),
+      radial-gradient(at 50% 50%, rgba(191,245,73,0.02) 0px, transparent 80%);
+    animation: ambient-glow 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes ambient-glow {
+    0% { background-position: 0% 0%; filter: hue-rotate(0deg); }
+    100% { background-position: 100% 100%; filter: hue-rotate(15deg); }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tighter;
+  }
+
+  .text-primary {
+    @apply bg-gradient-to-br from-primary via-primary/90 to-white bg-clip-text text-transparent;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-background font-bold px-8 py-3 rounded-lg transition-all flex items-center justify-center gap-2 hover:bg-white hover:text-background active:scale-95 text-center shadow-[0_0_20px_rgba(191,245,73,0.1)];
+  }
+
+  .btn-primary svg {
+    @apply transition-transform duration-300;
+  }
+
+  .btn-primary:hover svg {
+    @apply translate-x-1;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-white/20 text-white font-bold px-8 py-3 rounded-lg transition-all flex items-center justify-center gap-2 hover:bg-white hover:text-background hover:border-white active:scale-95 text-center;
+  }
+
+  .btn-secondary svg {
+    @apply transition-transform duration-300;
+  }
+
+  .btn-secondary:hover svg {
+    @apply translate-x-1;
+  }
+
+  .glass-card {
+    @apply bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-8 relative overflow-hidden;
+    box-shadow: 
+      0 30px 60px -12px rgba(0, 0, 0, 0.5),
+      inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent;
+  }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="h-full" lang="es" style="background-color: #0d0d0d;">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/UC_logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UC Ideiak | Bienvenidos </title>
+  <script defer type="module" src="/src/main.ts"></script>
+</head>
+
+<body class="min-h-screen bg-background text-white selection:bg-primary selection:text-background">
+
+  <nav class="container mx-auto px-6 py-8 md:py-12 flex justify-between items-center">
+    <a href="/" class="flex items-center group transition-all">
+      <img class="h-24 md:h-36 lg:h-56 w-auto drop-shadow-[0_0_30px_rgba(191,245,73,0.3)] group-hover:drop-shadow-[0_0_50px_rgba(191,245,73,0.5)] transition-all duration-500 group-hover:scale-105" src="/src/assets/UC_brand.png" alt="Logo de UC Ideiak">
+    </a>
+    <a href="/login.html">
+      <button class="btn-primary">
+        <span>Área Cliente</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </button>
+    </a>
+  </nav>
+
+  <main class="container mx-auto px-6 py-12 md:py-24 lg:py-32 relative">
+    <!-- Elementos Dinámicos Discretos -->
+    <div class="absolute inset-0 -z-10 pointer-events-none" aria-hidden="true">
+      <!-- Grid de micro-puntos técnico -->
+      <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 1px 1px, #BFF549 1px, transparent 0); background-size: 32px 32px;"></div>
+      <!-- Línea de flujo sutil -->
+      <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-pulse opacity-30"></div>
+    </div>
+
+    <section class="max-w-4xl mx-auto text-center space-y-12 relative">
+      
+      <!-- Contenido Texto Centrado -->
+      <div class="space-y-8 md:space-y-12">
+        <h1 class="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tighter">
+          Transformamos <span class="text-primary italic">ideas</span> en soluciones digitales.
+        </h1>
+        
+        <div class="glass-card space-y-8 md:space-y-10 mx-auto max-w-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+          <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left border-b border-white/5 pb-10">
+            <li class="flex flex-col items-center md:items-start space-y-4">
+              <span class="size-2.5 rounded-full bg-primary shadow-[0_0_15px_rgba(191,245,73,0.6)]"></span>
+              <span class="font-medium text-lg md:text-xl opacity-90 tracking-wide leading-tight uppercase">AUTOMATIZACIÓN DE TAREAS</span>
+            </li>
+            <li class="flex flex-col items-center md:items-start space-y-4">
+              <span class="size-2.5 rounded-full bg-primary shadow-[0_0_15px_rgba(191,245,73,0.6)]"></span>
+              <span class="font-medium text-lg md:text-xl opacity-90 tracking-wide leading-tight uppercase">SOLUCIONES NO/LOW CODE</span>
+            </li>
+            <li class="flex flex-col items-center md:items-start space-y-4">
+              <span class="size-2.5 rounded-full bg-primary shadow-[0_0_15px_rgba(191,245,73,0.6)]"></span>
+              <span class="font-medium text-lg md:text-xl opacity-90 tracking-wide leading-tight uppercase">DIGITALIZACIÓN DE PROCESOS</span>
+            </li>
+          </ul>
+          
+          <div class="flex justify-center pt-2">
+            <a href="/contacto.html" class="btn-primary">
+              <span>CONTACTO</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+  </main>
+
+
+  <footer class="mt-auto py-8 border-t border-white/10">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-sm opacity-50">
+        © 2023 UC Ideiak. Proyectando el futuro con tecnología.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

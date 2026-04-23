@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="h-full" lang="es" style="background-color: #0d0d0d;">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/UC_logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UC Ideiak | Contacto </title>
+  <script defer type="module" src="/src/main.ts"></script>
+</head>
+
+<body class="min-h-screen bg-background text-white selection:bg-primary selection:text-background flex flex-col">
+
+  <nav class="container mx-auto px-6 py-10 flex justify-between items-center">
+    <a href="/" class="flex items-center group">
+      <img
+        class="h-24 md:h-32 lg:h-40 w-auto drop-shadow-[0_0_20px_rgba(191,245,73,0.2)] group-hover:scale-105 transition-all duration-500"
+        src="/src/assets/UC_brand.png" alt="Logo de UC Ideiak">
+    </a>
+  </nav>
+
+  <main class="flex-grow flex items-center justify-center px-6 py-12">
+    <div class="w-full max-w-lg">
+      <div class="glass-card shadow-2xl">
+        <div class="mb-10 text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-white uppercase italic">Cuéntanos tu <span class="text-primary tracking-tighter">proyecto</span></h2>
+          <p class="mt-2 text-sm text-white/50 tracking-widest uppercase">Digitalizando procesos</p>
+        </div>
+
+        <form class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="e59dfe19-fdec-4281-a497-0b8a04a4cedf" />
+          
+          <div class="space-y-2">
+            <label for="name" class="block text-xs font-bold text-white/60 uppercase tracking-widest ml-1">Nombre</label>
+            <input id="name" type="text" name="name" required autocomplete="name"
+              class="block w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+              placeholder="Tu nombre" />
+          </div>
+
+          <div class="space-y-2">
+            <label for="email" class="block text-xs font-bold text-white/60 uppercase tracking-widest ml-1">Correo electrónico</label>
+            <input id="email" type="email" name="email" required autocomplete="email"
+              class="block w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+              placeholder="correo@ejemplo.com" />
+          </div>
+
+          <div class="space-y-2">
+            <label for="message" class="block text-xs font-bold text-white/60 uppercase tracking-widest ml-1">Comentarios</label>
+            <textarea id="message" name="message" required rows="4"
+              class="block w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none"
+              placeholder="¿Cómo podemos ayudarte?"></textarea>
+          </div>
+
+          <div class="pt-4">
+            <button type="submit" class="btn-primary w-full py-4 text-base tracking-widest">
+              <span>ENVIAR MENSAJE</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </div>
+          
+          <input type="hidden" name="redirect" value="https://www.ucideiak.com/thanks.html" />
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-12 border-t border-white/10">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-[10px] font-bold opacity-30 uppercase tracking-[0.4em]">
+        © 2023 UC Ideiak. Proyectando el futuro con tecnología.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

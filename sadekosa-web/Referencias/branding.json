@@ -1,0 +1,110 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Montserrat",
+      "role": "heading"
+    },
+    {
+      "family": "Nunito",
+      "role": "body"
+    }
+  ],
+  "colors": {
+    "primary": "#94601B",
+    "accent": "#1B5094",
+    "background": "#FFFFFF",
+    "textPrimary": "#1B5094",
+    "link": "#1B5094"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Nunito",
+      "heading": "Montserrat"
+    },
+    "fontStacks": {
+      "heading": [
+        "Montserrat",
+        "sans-serif"
+      ],
+      "body": [
+        "Montserrat",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Montserrat",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "16px",
+      "h2": "48px",
+      "body": "56px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "3px"
+  },
+  "components": {
+    "input": {
+      "background": "#EFF3F6",
+      "textColor": "#333333",
+      "borderColor": null,
+      "borderRadius": "0px",
+      "borderRadiusCorners": {
+        "topLeft": "0px",
+        "topRight": "0px",
+        "bottomRight": "0px",
+        "bottomLeft": "0px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "https://sadekosa.com/wp-content/uploads/2020/10/logotipo-sadekosa.jpg",
+    "favicon": "https://sadekosa.com/wp-content/uploads/2020/10/favicon-sadekosa.png",
+    "ogImage": "https://sadekosa.com/wp-content/uploads/2020/10/icono-mision.jpg",
+    "logoHref": "https://sadekosa.com/",
+    "logoAlt": "sadekosa"
+  },
+  "__framework_hints": [
+    "WordPress 6.4.2"
+  ],
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is visible, large, located in the header, and links to the homepage. The alt text matches the brand name 'sadekosa'.",
+    "confidence": 0.95,
+    "source": "llm"
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "business professionals"
+  },
+  "designSystem": {
+    "framework": "custom",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0,
+    "colors": 0.9,
+    "overall": 0.45
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is visible, large, located in the header, and links to the homepage. The alt text matches the brand name 'sadekosa'.",
+        "confidence": 0.95
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": false,
+      "llmSucceeded": false
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* ============================================ */
+/* Variables CSS del proyecto                   */
+/* ============================================ */
+:root {
+  --primary: #1a1a1a;
+  --accent: #d4af37;
+  --bg-dark: #0a0a0a;
+}
+
+/* ============================================ */
+/* Estilos base                                 */
+/* ============================================ */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: #ffffff;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* ============================================ */
+/* Navegación con efecto glassmorphism          */
+/* ============================================ */
+.glass-nav {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================ */
+/* Hero con imagen de fondo parallax            */
+/* ============================================ */
+.hero-gradient {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ============================================ */
+/* Animaciones de revelación al hacer scroll    */
+/* ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================ */
+/* Tarjetas de proyecto con efecto hover        */
+/* ============================================ */
+.project-card {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+/* ============================================ */
+/* Badge indicador de servicio                  */
+/* ============================================ */
+.service-badge {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* ============================================ */
+/* Asistente de presupuesto (Wizard)            */
+/* ============================================ */
+#budget-wizard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.wizard-step {
+  display: none;
+}
+
+.wizard-step.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

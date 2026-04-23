@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import '../../styles/global.css';
+
+// Obtenemos todas las noticias y las ordenamos por fecha (más recientes primero)
+const noticiasDesc = (await getCollection('noticias')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Layout>
+  <Navbar />
+  
+  <main class="container mx-auto px-4 pt-32 pb-24 max-w-6xl">
+    <header class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Noticias Sadekosa</h1>
+      <p class="text-xl text-gray-400">Actualidad técnica y corporativa en rehabilitación de edificios e impermeabilización.</p>
+    </header>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {noticiasDesc.map(noticia => (
+        <article class="bg-zinc-900/50 rounded-xl border border-white/5 overflow-hidden hover:border-amber-500/30 transition-all duration-500 flex flex-col group">
+          {noticia.data.image && (
+            <div class="aspect-video w-full overflow-hidden bg-zinc-800">
+              <Image 
+                src={noticia.data.image} 
+                alt={noticia.data.title} 
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+            </div>
+          )}
+          <div class="p-6 flex flex-col flex-grow">
+            <time class="text-sm font-medium text-amber-500 mb-3 block">
+              {noticia.data.date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            <h2 class="text-xl font-bold mb-4 text-white line-clamp-2">
+              <a href={`/noticias/${noticia.id}`} class="hover:text-amber-400 transition-colors">
+                {noticia.data.title}
+              </a>
+            </h2>
+            <p class="text-gray-400 mb-6 line-clamp-3 flex-grow leading-relaxed">
+              {noticia.data.description}
+            </p>
+            <div class="mt-auto">
+              <a href={`/noticias/${noticia.id}`} class="inline-flex items-center text-amber-500 font-bold hover:text-amber-400 group/link">
+                Leer artículo
+                <i class="fa-solid fa-arrow-right ml-2 transform group-hover/link:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
